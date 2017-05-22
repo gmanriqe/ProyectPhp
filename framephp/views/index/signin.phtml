@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Tienda Retablo | Registrate</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="<?php echo BASE_URL?>public/assets/css/styles.css"/>
+</head>
+<body>
+	<aside>
+		<div style="text-align: center">
+			<img alt="Logo" src="<?php echo BASE_URL?>public/assets/images/logoSolo3.svg"/ width="60px">	
+		</div>
+	  <h1> HUACHO DELIVERY </h1>
+	    <nav>
+	      <ul>
+	        <li><a href="#nowhere" title="IR A HTML">Tragos</a></li>
+	        <li><a href="#nowhere" title="IR A CSS">Piqueos</a></li>
+	        <li><a href="#nowhere" title="IR A JS">Tragos</a></li>
+	        <li><a href="#nowhere" title="IR A JQUERY">Tragos</a></li>
+	        <li><a href="#nowhere" title="IR A SAILSJS">Tragos</a></li>
+	        <li><a href="#nowhere" title="IR A PHP">Php</a></li>
+	      </ul>
+	    </nav>
+	    <p class="footer">Powered By GManriqe</p>
+	</aside>
+
+	<a id="nav-toggle" href="#!" class="position"><span></span></a>
+	<main>
+	  <header>
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-xs-6 col-xs-offset-3">
+	    			<a href="<?php echo BASE_URL?>"><img alt="Logo" src="<?php echo BASE_URL?>public/assets/images/logoPrincipal.svg"></a>
+	    		</div>
+	    	</div>
+	    </div>
+	  </header> <!-- fin header -->
+	  <div>
+	  </div> <!-- fin  -->
+	 <section class="container-login" style="padding: 30px">
+	 	<div class="container">
+	 		<div class="row">
+	 			<div class="col-md-6 col-md-offset-3">
+	 				<form action="<?php echo BASE_URL?>index/register" method="POST">
+	 					<div class="form-group">
+	 						<label>Nombre</label>
+	 						<input type="text" class="form-control"/>
+	 					</div>
+	 					<div class="form-group">
+	 						<label>usuario</label>
+	 						<input type="password" class="form-control"/>
+	 					</div>
+	 					<div class="form-group">
+	 						<label>contraseña</label>
+	 						<input type="text" class="form-control"/>
+	 					</div>
+	 					<div class="form-group">
+	 						<label>email</label>
+	 						<input type="password" class="form-control"/>
+	 					</div>
+	 					<div class="form-group">
+	 						<label>telefono</label>
+	 						<input type="password" class="form-control"/>
+	 					</div>
+	 					<input type="submit" value="Registrar"/>
+	 				</form>
+	 			</div>
+	 		</div>
+	 	</div>
+	 </section>
+<!-- 	  <section> -->
+<!-- 	  	<div class="container"> -->
+<!-- 	  		<div class="row"> -->
+<!-- 	  			<div class="col-md-12"> -->
+<!-- 	  				<h1>Contactanos</h1> -->
+<!-- 	  			</div> -->
+<!-- 	  			<form action="" method=""> -->
+<!-- 	  				<div class=""> -->
+<!-- 		  				<label for="">Nombre</label> -->
+<!-- 		  				<input type="text"> -->
+<!-- 		  			</div> -->
+<!-- 		  			<div class=""> -->
+<!-- 		  				<label for="">Direccion</label> -->
+<!-- 		  				<input type="text"> -->
+<!-- 		  			</div> -->
+<!-- 		  			<div class=""> -->
+<!-- 		  				<label for="">Referencia</label> -->
+<!-- 		  				<input type="text"> -->
+<!-- 		  			</div> -->
+<!-- 		  			<div class=""> -->
+<!-- 		  				<label for="">Telefono</label> -->
+<!-- 		  				<input type="text"> -->
+<!-- 		  			</div> -->
+<!-- 		  			<div class=""> -->
+<!-- 		  				<label for="">Mensaje</label> -->
+<!-- 		  				<textarea type="text"></textarea> -->
+<!-- 		  			</div> -->
+<!-- 	  			</form> -->
+<!-- 	  		</div> -->
+<!-- 		</div> -->
+<!-- 	</section> -->
+	<section class="container-contactus">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="contactacus">
+						<p>Llegamos en menos de 20 minutos -<strong> TODO HUACHO</strong></p>
+						<a href="">CONTACTANOS</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $('#nav-toggle').click(function() {
+			    //icon
+			    $(this).toggleClass('active');
+			    
+			    if ($('body').hasClass('show-nav')) {
+			      // Hide sidebar
+			      $('body').removeClass('show-nav');
+			    } else { 
+			      // If sidebar is hidden:
+			      $('body').addClass('show-nav'); // Display sidebar
+			    }
+			  });
+			});
+		</script>
+	</body>
+	</html>
