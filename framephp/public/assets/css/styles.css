@@ -559,6 +559,10 @@ y que movera tanto al aside:sidebar, .position:icono y main:cuerpo  en el eje x 
 /******************
 Elijah Manor’s CSS Animated Hamburger Icon
 ******************/
+aside {
+    padding-top: 40px;
+}
+
 #nav-toggle {
   cursor: pointer;
   padding: 10px 35px 16px 0px;
@@ -607,8 +611,39 @@ Elijah Manor’s CSS Animated Hamburger Icon
 #nav-toggle.active span:after {
   transform: rotate(-45deg);
 }
+
 /*-----------------*/
-/* login */
+/* button */
+/*-----------------*/
+.btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 6px 25px;
+    font-size: 17px;
+    text-decoration: none;
+    margin: 20px;
+    color: #fff;
+    position: relative;
+    transition: .3s all ease;
+  }
+
+  .btn:active {
+    transform: translate(0px, 5px);
+    box-shadow: 0 1px 0 0;
+  }
+  
+  .yellow {
+    background-color: #ffc600;
+    box-shadow: 0 5px 0 0 #cfa200;
+  }
+  
+  .yellow:hover {
+    background-color: #ffc600;
+  }
+
+
+/*-----------------*/
+/* loginsa */
 /*-----------------*/
 .login {
     position: absolute;
@@ -628,6 +663,17 @@ Elijah Manor’s CSS Animated Hamburger Icon
 	    right: -2px;
 	}
 
+.container-loginus .notaccount {
+	text-align: center;
+}
+
+.container-loginsa .form-control:nth-child(3) {
+	display:none;
+}
+
+/*-----------------*/
+/* loginus */
+/*-----------------*/
 .loginUser {
     position: absolute;
     top: 25px;
@@ -637,6 +683,8 @@ Elijah Manor’s CSS Animated Hamburger Icon
     z-index: 11;
     text-decoration: none;
 }
+
+
 /*-----------------*/
 /* container-contactus */
 /*-----------------*/
@@ -660,6 +708,7 @@ Elijah Manor’s CSS Animated Hamburger Icon
 	padding: 15px 22px;
 	text-decoration: none;
 	transition: .3s all ease;
+	border: 1px solid transparent;
 }
 	.contactacus a:hover {
 		border: 1px solid #FFC600;

@@ -5,6 +5,7 @@
 	<title>Tienda Retablo | Registrate</title>
 	<!-- bootstrap -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<!-- 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 	<link rel="stylesheet" href="<?php echo BASE_URL?>public/assets/css/styles.css"/>
 </head>
 <body>
@@ -15,12 +16,8 @@
 	  <h1> HUACHO DELIVERY </h1>
 	    <nav>
 	      <ul>
-	        <li><a href="#nowhere" title="IR A HTML">Tragos</a></li>
-	        <li><a href="#nowhere" title="IR A CSS">Piqueos</a></li>
-	        <li><a href="#nowhere" title="IR A JS">Tragos</a></li>
-	        <li><a href="#nowhere" title="IR A JQUERY">Tragos</a></li>
-	        <li><a href="#nowhere" title="IR A SAILSJS">Tragos</a></li>
-	        <li><a href="#nowhere" title="IR A PHP">Php</a></li>
+	        <li><a href="#nowhere" title="IR A Tragos">Tragos</a></li>
+	        <li><a href="#nowhere" title="IR A Piqueos">Piqueos</a></li>
 	      </ul>
 	    </nav>
 	    <p class="footer">Powered By GManriqe</p>
@@ -42,65 +39,46 @@
 	 <section class="container-login" style="padding: 30px">
 	 	<div class="container">
 	 		<div class="row">
+<!-- 	 			<div class="col-md-6 col-md-offset-3"> -->
+<!-- 	 				<p><i class="fa fa-arrow-circle-left" aria-hidden="true"></i></p> -->
+<!-- 	 			</div> -->
 	 			<div class="col-md-6 col-md-offset-3">
-	 				<form action="<?php echo BASE_URL?>index/register" method="POST">
+	 				<!-- <form action="<?php echo BASE_URL?>usuario/registerus" method="POST"> -->
+	 				<form method="POST" id="form_signin">
 	 					<div class="form-group">
 	 						<label>Nombre</label>
-	 						<input type="text" class="form-control"/>
+	 						<input type="text" class="form-control" name="nombre" id="nombre"/>
 	 					</div>
 	 					<div class="form-group">
-	 						<label>usuario</label>
-	 						<input type="password" class="form-control"/>
+	 						<label>Usuario</label>
+	 						<input type="text" class="form-control" name="usuario" id="usuario"/>
 	 					</div>
 	 					<div class="form-group">
-	 						<label>contraseña</label>
-	 						<input type="text" class="form-control"/>
+	 						<label>Contraseña</label>
+	 						<input type="text" class="form-control" name="clave1" id="clave1"/>
 	 					</div>
 	 					<div class="form-group">
-	 						<label>email</label>
-	 						<input type="password" class="form-control"/>
+	 						<label>Repita contraseña</label>
+	 						<input type="text" class="form-control" name="clave2" id="clave2"/>
 	 					</div>
 	 					<div class="form-group">
-	 						<label>telefono</label>
-	 						<input type="password" class="form-control"/>
+	 						<label>Email</label>
+	 						<input type="email" class="form-control" name="email" id="email"/>
 	 					</div>
-	 					<input type="submit" value="Registrar"/>
+	 					<div class="form-group">
+	 						<label>Telefono</label>
+	 						<input type="text" class="form-control" name="telefono" id="telefono"/>
+	 					</div>
+	 					<div class="form-group text-center">
+	 						<!-- <button type="submit" class="btn yellow">Registrar</button> -->
+	 						<button type="button" id="btn_registrar" class="btn yellow">Registrar</button>
+	 					</div>
+	 					<div id="zona_respuesta"></div>
 	 				</form>
 	 			</div>
 	 		</div>
 	 	</div>
 	 </section>
-<!-- 	  <section> -->
-<!-- 	  	<div class="container"> -->
-<!-- 	  		<div class="row"> -->
-<!-- 	  			<div class="col-md-12"> -->
-<!-- 	  				<h1>Contactanos</h1> -->
-<!-- 	  			</div> -->
-<!-- 	  			<form action="" method=""> -->
-<!-- 	  				<div class=""> -->
-<!-- 		  				<label for="">Nombre</label> -->
-<!-- 		  				<input type="text"> -->
-<!-- 		  			</div> -->
-<!-- 		  			<div class=""> -->
-<!-- 		  				<label for="">Direccion</label> -->
-<!-- 		  				<input type="text"> -->
-<!-- 		  			</div> -->
-<!-- 		  			<div class=""> -->
-<!-- 		  				<label for="">Referencia</label> -->
-<!-- 		  				<input type="text"> -->
-<!-- 		  			</div> -->
-<!-- 		  			<div class=""> -->
-<!-- 		  				<label for="">Telefono</label> -->
-<!-- 		  				<input type="text"> -->
-<!-- 		  			</div> -->
-<!-- 		  			<div class=""> -->
-<!-- 		  				<label for="">Mensaje</label> -->
-<!-- 		  				<textarea type="text"></textarea> -->
-<!-- 		  			</div> -->
-<!-- 	  			</form> -->
-<!-- 	  		</div> -->
-<!-- 		</div> -->
-<!-- 	</section> -->
 	<section class="container-contactus">
 		<div class="container">
 			<div class="row">
@@ -131,5 +109,10 @@
 			  });
 			});
 		</script>
+		<?php if(isset($_layoutParams['js']) && count($_layoutParams['js'])): ?>
+			<?php foreach($_layoutParams['js'] as $layout): ?>
+   				<script src="<?php echo  $layout ?>" type="text/javascript"></script>
+			<?php endforeach; ?>
+		<?php endif; ?> 
 	</body>
 	</html>

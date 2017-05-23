@@ -17,6 +17,18 @@ Class usuarioModel extends Model{
 			return false;
 	}
 	
+	public function saveUsuario($usuario,$nombre,$clave1,$email,$telefono){
+		$sql = "INSERT INTO usuarios SET idusuario ='$usuario',
+										 nombre = '$nombre',
+										 clave = SHA1('$clave1'),
+										 email = '$email',
+										 telefono = '$telefono',
+										 fechareg = NOW(),
+										 rol = 'us'";
+		$this->_db->query($sql);
+		return $this->_db->errno;
+	}
+	
 // 	public function useradd($idUser,$firstName,$lastName,$email,$password){
 // 		$sql =" insert into users set 
 // 									idUser = '$idUser',

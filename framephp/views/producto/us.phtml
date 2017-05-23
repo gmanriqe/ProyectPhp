@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Tienda Retablo | Lista Productos</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="<?php echo BASE_URL?>public/assets/css/styles.css"/>
+</head>
+<body>
+	<aside>
+		<div style="text-align: center">
+			<img alt="Logo" src="<?php echo BASE_URL?>public/assets/images/logoSolo3.svg"/ width="60px">	
+		</div>
+	  <h1> HUACHO DELIVERY </h1>
+	    <nav>
+	      <ul>
+	        <li><a href="#nowhere" title="IR A Tragos">Tragos</a></li>
+	        <li><a href="#nowhere" title="IR A Piqueos">Piqueos</a></li>
+	      </ul>
+	    </nav>
+	    <p class="footer">Powered By GManriqe</p>
+	</aside>
+	<a class="login" href="<?php echo BASE_URL?>index/iniciasesion">SA</a>
+	<a id="nav-toggle" href="#!" class="position"><span></span></a>
+	<main>
+	  <header>
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-xs-6 col-xs-offset-3">
+	    			<a href="<?php echo BASE_URL?>"><img alt="Logo" src="<?php echo BASE_URL?>public/assets/images/logoPrincipal.svg"></a>
+	    		</div>
+	    	</div>
+	    </div>
+	  </header> <!-- fin header -->
+	  <div>
+	  </div> <!-- fin  -->
+	 <section class="container-loginsa" style="padding: 30px">
+	 	<div class="container">
+	 		<div class="row">
+	 			<div class="col-md-12" style="text-align: center">
+	 				<h3>Productos</h3>
+	 			</div>
+	 			
+				<!-- FOR PRODUCTO -->
+				<?php while($producto = $this-> productos -> fetch_object()):?>
+				<div class="col-sm-3" style="margin-bottom: 10px">
+					<div style="border:1px solid #cdcdcd; text-align:center">
+						<h3><?php echo $producto->nombre?></h3>
+						<img class="img-responsive" src="http://placehold.it/260x260">
+						<strong style="display:block">codigo: <?php echo $producto->codigoproducto?></strong>
+						<strong style="display:block">S/.<?php echo $producto->precio?></strong>
+					</div>
+				</div>
+	 			<?php endwhile;?>
+	 		</div>
+	 	</div>
+	 </section>
+	 <section class="container-contactus">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="contactacus">
+						<p>Llegamos en menos de 20 minutos -<strong> TODO HUACHO</strong></p>
+						<p>Mandanos tu pedido</p>
+						<a href="">CONTACTANOS</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $('#nav-toggle').click(function() {
+			    //icon
+			    $(this).toggleClass('active');
+			    
+			    if ($('body').hasClass('show-nav')) {
+			      // Hide sidebar
+			      $('body').removeClass('show-nav');
+			    } else { 
+			      // If sidebar is hidden:
+			      $('body').addClass('show-nav'); // Display sidebar
+			    }
+			  });
+			});
+		</script>
+	</body>
+	</html>

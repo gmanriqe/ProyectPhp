@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Tienda Retablo | Editar Productos</title>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+	<link href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="<?php echo BASE_URL?>public/assets/css/styles.css"/>
+</head>
+<body>
+	<aside>
+		<div style="text-align: center">
+			<img alt="Logo" src="<?php echo BASE_URL?>public/assets/images/logoSolo3.svg"/ width="60px">	
+		</div>
+	  <h1> HUACHO DELIVERY </h1>
+	    <nav>
+	      <ul>
+	        <li><a href="#nowhere" title="IR A Tragos">Tragos</a></li>
+	        <li><a href="#nowhere" title="IR A Piqueos">Piqueos</a></li>
+	      </ul>
+	    </nav>
+	    <p class="footer">Powered By GManriqe</p>
+	</aside>
+	<a class="login" href="<?php echo BASE_URL?>index/iniciasesion">SA</a>
+	<a id="nav-toggle" href="#!" class="position"><span></span></a>
+	<main> <header>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-xs-offset-3">
+					<a href="<?php echo BASE_URL?>"><img alt="Logo"
+						src="<?php echo BASE_URL?>public/assets/images/logoPrincipal.svg"></a>
+				</div>
+			</div>
+		</div>
+	</header> <!-- fin header -->
+	<div></div>
+	<!-- fin  -->
+	<section class="container-loginsa" style="padding: 30px">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="text-align:center">
+					<h3> Actualizar Producto</h3>
+				</div>
+				<div class="col-md-6 col-md-offset-3">
+					<form role="form" action="<?php echo BASE_URL?>producto/editar"
+						method="POST" id="form_editusuario">
+						<!-- <form role="form"  method="POST" id="form_updateproducto"> -->
+						<div class="form-group">
+							<label><?php echo _('Codigo')?></label> 
+							<input
+								class="form-control"
+								name="codigoproducto" id="codigoproducto"
+								value="<?php echo $this->dataProducto->codigoproducto?>" readonly>
+						</div>
+						<div class="form-group">
+							<label><?php echo _('Nombre')?></label> 
+							<input
+								class="form-control" 
+								name="nombre" id="nombre"
+								value="<?php echo $this->dataProducto->nombre?>">
+						</div>
+						<div class="form-group">
+							<label><?php echo _('Precio')?></label> 
+							<input
+								class="form-control" 
+								name="precio" id="precio"
+								value="<?php echo $this->dataProducto->precio?>">
+						</div>
+						<div class="form-group">
+							<label><?php echo _('Stock')?></label> 
+							<input
+								class="form-control"
+								name="stock" id="stock"
+								value="<?php echo $this->dataProducto->stock?>">
+						</div>
+						<div class="form-group text-center">
+							<button type="submit" id="btn_actualizar" class="btn yellow">Actualizar</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script type="text/javascript" src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $('#nav-toggle').click(function() {
+			    //icon
+			    $(this).toggleClass('active');
+			    
+			    if ($('body').hasClass('show-nav')) {
+			      // Hide sidebar
+			      $('body').removeClass('show-nav');
+			    } else { 
+			      // If sidebar is hidden:
+			      $('body').addClass('show-nav'); // Display sidebar
+			    }
+			  });
+			});
+
+			$(document).ready(function(){
+				$('#myTable').DataTable();
+			});
+		</script>
+		
+	</body>
+	</html>
